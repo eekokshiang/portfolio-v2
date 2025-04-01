@@ -84,7 +84,7 @@
   .email-context {
     @include font(base, 1.4, 300);
     width: 100% !important;
-    min-height: 200px;
+    min-height: 20vh;
     color: var(--color-text-primary);
     background: transparent;
     padding: 24px;

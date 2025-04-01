@@ -4,14 +4,15 @@
 
 .project {
   @include max-width-1280;
-  @include flex-col(center, center, 24px);
+  @include flex-col(center, space-between, 24px);
   height: 100dvh;
+
+  padding: 15vh 0 20vh;
 
   color: var(--color-primary);
 
-  @include media-height-tall {
-    // padding-top: 2vh;
-    // padding-bottom: 30vh;
+  @include media-phone {
+    padding: 2vh 0 12vh;
   }
 }
 

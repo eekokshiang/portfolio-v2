@@ -4,7 +4,7 @@
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 24px;
 
   width: 100%;
@@ -39,7 +39,7 @@
   @include hover-effect {
     color: var(--color-primary);
     .title {
-      bottom: 28px;
+      bottom: 16px;
     }
   }
 
