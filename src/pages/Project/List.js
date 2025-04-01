@@ -28,14 +28,26 @@ const rawList = [
     title: 'TorumPay - Crypto Payment App',
     desc: 'Developed a government-authorized website for an app that approved by the Securities Commission Malaysia.',
     workOn: ['React JS', 'Javascript', 'SCSS'],
-    navigate: [{ icon: <WebsiteIcon />, link: 'https://pay.torum.com/' }],
+    navigate: [
+      {
+        icon: <WebsiteIcon />,
+        text: 'VISIT WEBSITE',
+        link: 'https://pay.torum.com/',
+      },
+    ],
     previewImg: projectOneTwo,
   },
   {
     title: 'Torum V2',
     desc: 'A blockchain-based project designed to showcase immersive VR features seamlessly on mobile devices, blending cutting-edge technology with on-the-go accessibility.',
     workOn: ['React JS', 'Javascript', 'SCSS', 'Figma'],
-    navigate: [{ icon: <WebsiteIcon />, link: 'https://intro.torum.com/' }],
+    navigate: [
+      {
+        icon: <WebsiteIcon />,
+        text: 'VISIT WEBSITE',
+        link: 'https://intro.torum.com/',
+      },
+    ],
     previewImg: projectOneThree,
   },
 ];

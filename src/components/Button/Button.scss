@@ -18,6 +18,8 @@ button {
 }
 
 .project-link-button {
+  @include font(sm, 1, 500);
+  @include flex-row(center, center, 8px);
   padding: 10px;
   border-radius: 2px;
   color: var(--color-text-tertiary);

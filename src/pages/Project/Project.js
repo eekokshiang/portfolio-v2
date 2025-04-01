@@ -69,6 +69,7 @@ function Project() {
                 className="project-link-button"
               >
                 {button.icon}
+                {button.text}
               </Button>
             ))}
           </div>
