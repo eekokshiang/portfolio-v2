@@ -20,7 +20,7 @@ button {
 .project-link-button {
   @include font(sm, 1, 500);
   @include flex-row(center, center, 8px);
-  padding: 10px;
+  padding: 10px 16px 10px 10px;
   border-radius: 2px;
   color: var(--color-text-tertiary);
   background-color: var(--color-primary);
@@ -35,7 +35,7 @@ button {
   }
 
   @include media-small-phone {
-    padding: 8px;
+    padding: 8px 10px 8px 8px;
     svg {
       width: 20px;
       height: auto;
