@@ -5,7 +5,9 @@
 .home {
   width: 100%;
   height: 100dvh;
-  padding: 100px 0 220px;
+
+  padding-top: 10vh;
+  padding-bottom: 20vh;
   overflow-x: hidden;
 
   @include flex-row(center, center);

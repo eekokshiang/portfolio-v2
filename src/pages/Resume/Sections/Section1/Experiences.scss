@@ -3,7 +3,7 @@
 @import '../../../../global/styles/mixins.scss';
 
 .experience {
-  @include flex-col(flex-start, center, 80px);
+  @include flex-col(flex-start, center, 40px);
   width: 100%;
 
   @include media-phone {
@@ -22,7 +22,7 @@
 }
 
 .experience-container {
-  @include flex-col(flex-start, center, 60px);
+  @include flex-col(flex-start, center, 40px);
   text-transform: uppercase;
 
   @include media-phone {

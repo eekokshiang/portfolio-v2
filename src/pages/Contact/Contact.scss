@@ -6,7 +6,7 @@
   @include max-width-1280;
   @include flex-col(center, flex-start);
   min-height: 100dvh;
-  padding: 120px 0;
+  padding: 8vh 0;
   position: relative;
   overflow: hidden;
   @include transition-all-medium;
@@ -84,7 +84,7 @@
   .email-context {
     @include font(base, 1.4, 300);
     width: 100% !important;
-    min-height: 260px;
+    min-height: 200px;
     color: var(--color-text-primary);
     background: transparent;
     padding: 24px;
