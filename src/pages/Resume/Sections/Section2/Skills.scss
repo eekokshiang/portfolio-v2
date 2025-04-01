@@ -52,7 +52,7 @@
 
 .title {
   @include transition-all-fast;
-  @include font(xxs, 1, 400);
+  @include font(xxxs, 1, 400);
 
   color: var(--color-text-primary);
   position: absolute;
