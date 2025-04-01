@@ -13,8 +13,14 @@ const rawList = [
     desc: 'Current website was crafted with passion—to share my work, highlight my skills, and offer a glimpse into my creative journey. Every piece reflects experience and artistry for what I do.',
     workOn: ['React JS', 'Javascript', 'SCSS', 'GSAP', 'Figma'],
     navigate: [
-      { icon: <GithubIcon />, link: 'https://www.eekokshiang.com/' },
-      { icon: <FigmaIcon />, link: 'link' },
+      {
+        icon: <GithubIcon />,
+        link: 'https://github.com/eekokshiang/portfolio-v2',
+      },
+      {
+        icon: <FigmaIcon />,
+        link: 'https://www.figma.com/design/mb2BOF7hjzLkssj2zYrGJ0/Portfolio?node-id=865-141&t=qGX7FJy27O7fkKt2-4',
+      },
     ],
     previewImg: projectOneImg,
   },

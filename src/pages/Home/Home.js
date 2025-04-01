@@ -33,7 +33,7 @@ function Home() {
               className="button--icon"
               onClick={() =>
                 window.open(
-                  'https://www.linkedin.com/in/ee-kok-shiang-44a292223/',
+                  'https://github.com/eekokshiang/portfolio-v2',
                   '_blank',
                   'noopener,noreferrer'
                 )
