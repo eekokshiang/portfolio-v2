@@ -1,0 +1,66 @@
+@import '../../../../global/styles/colors.scss';
+@import '../../../../global/styles/fonts.scss';
+@import '../../../../global/styles/mixins.scss';
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+
+  width: 100%;
+
+  @include media-small-phone {
+    padding-bottom: 120px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+
+    svg {
+      width: 36px;
+    }
+  }
+}
+
+.box {
+  @include flex-row(center, center);
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+
+  color: var(--color-secondary);
+  background-color: var(--color-quaternary);
+
+  border-radius: 4px;
+
+  position: relative;
+  overflow: hidden;
+
+  @include transition-all-fast;
+
+  @include hover-effect {
+    color: var(--color-primary);
+    .title {
+      bottom: 28px;
+    }
+  }
+
+  @include media-small-phone {
+    aspect-ratio: 1 / 1.2;
+    padding-bottom: 16px;
+    color: var(--color-primary);
+  }
+}
+
+.title {
+  @include transition-all-fast;
+  @include font(xxs, 1, 400);
+
+  color: var(--color-text-primary);
+  position: absolute;
+  bottom: -200px;
+  text-transform: uppercase;
+
+  @include media-small-phone {
+    bottom: 20px;
+    color: var(--color-text-primary);
+  }
+}

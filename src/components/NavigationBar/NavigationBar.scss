@@ -1,0 +1,77 @@
+@import '../../global/styles/colors.scss';
+@import '../../global/styles/mixins.scss';
+@import '../../global/styles/variables.scss';
+@import '../../global/styles/fonts.scss';
+
+.navigation-bar-container {
+  @include flex-col(center, center, 4px);
+  width: 100%;
+  position: fixed;
+  bottom: calc(var(--vh, 1vh) * 4);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  background-color: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  @include transition-all-fast;
+
+  @include media-small-phone {
+    @include flex-col(center, center, 0);
+    bottom: calc(var(--vh, 1vh) * 0);
+    padding: 10px 0;
+  }
+
+  .hint-to-scroll {
+    @include font(xxxs, 1, 300);
+    color: var(--color-text-tertiary);
+
+    position: absolute;
+    top: -4px;
+    z-index: 1000;
+  }
+}
+
+.navigation-bar {
+  @include flex-row(center, center);
+  width: calc(100% - 16px);
+  max-width: 440px;
+
+  @include media-small-phone {
+    @include flex-row(center, space-evenly);
+  }
+
+  .container {
+    @include font(base, 1, 300);
+    @include flex-row;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 6);
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--color-button-inactive-el);
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    @include highlights-inactive;
+    @include transition-all-fast;
+
+    @include media-small-phone {
+      width: auto;
+    }
+  }
+
+  .active {
+    color: var(--color-button-active-el);
+    @include highlights-active;
+    @include transition-all-fast;
+  }
+}
+
+.bg-blur {
+  background-color: var(--color-bg-50);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  @include transition-all-fast;
+}

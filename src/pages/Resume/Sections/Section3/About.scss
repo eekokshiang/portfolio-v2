@@ -1,0 +1,30 @@
+@import '../../../../global/styles/colors.scss';
+@import '../../../../global/styles/fonts.scss';
+@import '../../../../global/styles/mixins.scss';
+
+.about-container {
+  @include flex-col(flex-start, center, 24px);
+
+  width: 100%;
+
+  color: var(--color-text-primary);
+
+  @include media-small-phone {
+    padding-bottom: 120px;
+  }
+}
+
+.about-name {
+  @include font(lg, 1.5, 500);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+
+  .name-highlight {
+    color: var(--color-text-primary);
+  }
+}
+
+.about-desc {
+  @include font(base, 1.6, 400);
+  @include flex-col(flex-start, center, 24px);
+}

@@ -1,0 +1,118 @@
+// Page Max Width Section
+@mixin max-width-1280($gap: 72px, $gapMobile: 32px) {
+  width: calc(100% - $gap);
+  max-width: 1280px;
+  height: auto;
+
+  margin: auto;
+
+  @media only screen and (max-width: 768px) {
+    width: calc(100% - $gapMobile);
+  }
+}
+
+// Display Flex Section
+
+@mixin flex($align: center, $justify: center, $diretion: row, $gap: 0) {
+  display: flex;
+  flex-direction: $diretion;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin flex-row($align: center, $justify: center, $gap: 0) {
+  display: flex;
+  flex-direction: row;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin flex-col($align: center, $justify: center, $gap: 0, $direction: column) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+// Transition Section
+
+@mixin transition-all-long {
+  transition: all 1s ease-out;
+}
+
+@mixin transition-all-medium {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin transition-all-fast {
+  transition: all 0.2s ease-in-out;
+}
+
+// Media Queries Section
+
+@mixin media-desktop {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin media-phone {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-small-phone {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media-xxs-phone {
+  @media only screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+// Hover & Active for Mobile Section
+
+@mixin hover-effect {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin active-effect {
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+// Highlight
+
+@mixin highlights-inactive {
+  filter: none;
+}
+
+@mixin highlights-active($spread: 12px, $opacity: 1, $color: white) {
+  filter: drop-shadow(0 0 $spread rgba($color, $opacity));
+}

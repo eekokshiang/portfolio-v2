@@ -1,0 +1,10 @@
+@import './global/styles/colors.scss';
+@import './global/styles/mixins.scss';
+@import './global/styles/variables.scss';
+
+body {
+  // color: $primary-text;
+  background-color: #000000;
+  overscroll-behavior: none;
+  overflow: hidden;
+}

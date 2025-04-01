@@ -1,0 +1,92 @@
+@import '../../../../global/styles/colors.scss';
+@import '../../../../global/styles/fonts.scss';
+@import '../../../../global/styles/mixins.scss';
+
+.experience {
+  @include flex-col(flex-start, center, 80px);
+  width: 100%;
+
+  @include media-phone {
+    @include flex-col(flex-start, center, 30px);
+  }
+
+  @include media-small-phone {
+    padding-bottom: 120px;
+  }
+}
+
+.desc {
+  @include font(base, 1.6, 300);
+
+  color: var(--color-primary);
+}
+
+.experience-container {
+  @include flex-col(flex-start, center, 60px);
+  text-transform: uppercase;
+
+  @include media-phone {
+    @include flex-col(flex-start, center, 30px);
+  }
+}
+
+.experience-content {
+  @include flex-col(flex-start, center, 16px);
+
+  &:nth-of-type(2) {
+    opacity: 0.6;
+  }
+
+  .years {
+    @include flex-row(center, flex-start, 8px);
+    @include font(base, 1.6, 300);
+    color: var(--color-text-primary);
+
+    .second {
+      color: var(--color-text-secondary);
+    }
+  }
+
+  .position {
+    @include flex-row(center, flex-start, 10px);
+    @include font(xl, 1, 400, 0.04rem);
+    flex-wrap: wrap;
+    color: var(--color-text-primary);
+
+    p {
+      text-wrap: nowrap;
+    }
+
+    svg {
+      width: 4px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  .company {
+    @include flex-row(center, flex-start, 12px);
+
+    height: 28px;
+
+    .company-box {
+      @include flex-row(center, center);
+      @include font(sm, 1.2, 500);
+      height: 100%;
+
+      color: var(--color-text-tertiary);
+      background-color: var(--color-primary);
+
+      padding: 0 12px;
+
+      border-radius: 2px;
+    }
+
+    .second {
+      @include font(sm, 1, 400);
+
+      color: var(--color-text-primary);
+      background-color: var(--color-secondary);
+    }
+  }
+}

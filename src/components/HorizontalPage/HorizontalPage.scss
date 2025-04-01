@@ -1,0 +1,14 @@
+.horizontal-scroll-container {
+  display: flex;
+  height: auto; /* ✅ Allows content to expand */
+  min-height: 100dvh; /* Ensures full viewport height */
+  overflow-y: auto; /* ✅ Enables vertical scrolling if content is taller */
+  overflow-x: hidden; /* ✅ Removes horizontal scroll */
+}
+
+.section {
+  width: 100vw;
+  min-height: 100dvh; /* Ensures full viewport height */
+  height: auto; /* ✅ Adjusts height based on content */
+  overflow-y: auto; /* ✅ Allows page to scroll vertically if needed */
+}

@@ -1,0 +1,12 @@
+.scramble-text-measure {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  width: 100%;
+  height: auto;
+  white-space: pre;
+}
+
+.scramble-text {
+  transition: min-height 0.3s ease;
+}

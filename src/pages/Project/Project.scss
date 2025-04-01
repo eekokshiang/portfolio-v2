@@ -1,0 +1,130 @@
+@import '../../global/styles/colors.scss';
+@import '../../global/styles/fonts.scss';
+@import '../../global/styles/mixins.scss';
+
+.project {
+  @include max-width-1280;
+  @include flex-col(center, space-between);
+  height: 100dvh;
+
+  padding: 160px 0 160px;
+
+  color: var(--color-primary);
+
+  @include media-phone {
+    padding: 30px 0 140px;
+  }
+
+  @include media-small-phone {
+    padding: 10px 0 90px;
+  }
+}
+
+.project-content {
+  @include flex-row(flex-start, space-between, 40px);
+  width: 100%;
+  height: auto;
+
+  @include media-phone {
+    @include flex-col(flex-start, space-between, 20px, column-reverse);
+  }
+}
+
+.project-num {
+  @include font(xxxl, 1, 500);
+  color: var(--color-text-tertiary);
+}
+
+.project-content-left {
+  @include flex-col(flex-start, center, 50px);
+  width: 100%;
+  max-width: 560px;
+
+  @include media-phone {
+    @include flex-col(flex-start, center, 30px);
+  }
+
+  .content-wrapper {
+    @include flex-col(flex-start, center, 16px);
+
+    .project-title {
+      @include font(xxl, 1, 600);
+      text-transform: uppercase;
+    }
+
+    .project-desc {
+      @include font(base, 1.4, 400);
+    }
+
+    .project-tech-wrapper {
+      @include flex-row(center, flex-start, 12px);
+      flex-wrap: wrap;
+      .project-tech {
+        @include font(xs, 1, 400);
+        @include flex-row(flex-start, center);
+
+        border-radius: 2px;
+
+        padding: 6px 12px;
+
+        text-transform: uppercase;
+        color: var(--color-text-primary);
+        background-color: var(--color-tertiary);
+      }
+    }
+  }
+}
+
+.project-link-wrapper {
+  @include flex-row(flex-start, center, 12px);
+}
+
+.project-content-right {
+  @include flex-row(center, center, 12px);
+
+  overflow: hidden;
+
+  @include media-phone {
+    width: 100%;
+
+    @include flex-col(flex-start, flex-start, 20px, column);
+  }
+
+  .project-mobile-header {
+    @include flex-row(center, space-between, 12px);
+    @include font(xxxl, 1, 500);
+    color: var(--color-text-tertiary);
+    width: 100%;
+  }
+
+  img {
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+    border: 1px solid var(--color-button-border);
+
+    @include media-phone {
+      width: 100%;
+      max-width: 100%;
+      height: 300px;
+    }
+
+    @include media-small-phone {
+      height: 140px;
+      object-position: 0px -70px;
+    }
+  }
+}
+
+.project-selector {
+  @include flex-row(center, center, 12px);
+  width: 100%;
+
+  padding: 24px 0 0 0;
+
+  border-top: solid 1px var(--color-button-border);
+
+  background-color: var(--c);
+}

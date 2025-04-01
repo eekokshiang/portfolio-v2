@@ -1,0 +1,101 @@
+@import '../../global/styles/colors.scss';
+@import '../../global/styles/mixins.scss';
+@import '../../global/styles/fonts.scss';
+
+button {
+  @include flex-row;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+.project-link-button {
+  padding: 10px;
+  border-radius: 2px;
+  color: var(--color-text-tertiary);
+  background-color: var(--color-primary);
+
+  @include transition-all-fast;
+  @include highlights-inactive;
+
+  @include hover-effect {
+    color: var(--color-tertiary);
+    background-color: var(--color-button-active-el);
+    @include highlights-active(4px);
+  }
+
+  @include media-small-phone {
+    padding: 8px;
+    svg {
+      width: 20px;
+      height: auto;
+    }
+  }
+}
+
+.project-switch-button {
+  @include flex-row(center, center, 8px);
+  @include font(xs, 1, 400);
+
+  width: auto;
+  color: var(--color-text-primary);
+  background-color: var(--color-button-inactive-el);
+  padding: 8px 12px;
+
+  border-radius: 2px;
+
+  @include transition-all-fast;
+
+  &.disable {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  @include hover-effect {
+    color: var(--color-text-tertiary);
+    background-color: var(--color-primary);
+
+    &.disable {
+      color: var(--color-text-primary);
+      background-color: var(--color-button-inactive-el);
+    }
+  }
+}
+
+.email-button {
+  @include font(xs, 1, 400);
+  @include transition-all-fast;
+  width: 100%;
+
+  padding: 16px 0;
+
+  &.email-inactive {
+    color: var(--email-button-inactive-el);
+    background-color: var(--email-button-inactive);
+    pointer-events: none;
+  }
+
+  &.email-active {
+    color: var(--email-button-active-el);
+    background-color: var(--email-button-active);
+    pointer-events: all;
+
+    @include hover-effect {
+      background-color: var(--email-button-active-hover);
+    }
+  }
+
+  &.email-api-calling {
+    color: var(--email-button-apicalling-el);
+    background-color: var(--email-button-apicalling);
+    pointer-events: none;
+  }
+}

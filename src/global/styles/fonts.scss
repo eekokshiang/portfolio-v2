@@ -1,0 +1,82 @@
+@import './variables.scss';
+
+$font-sizes: (
+  xxxs: (
+    desktop: 1rem,
+    tablet: 1rem,
+    mobile: 1rem,
+  ),
+  xxs: (
+    desktop: 1.3rem,
+    tablet: 1.2rem,
+    mobile: 1.1rem,
+  ),
+  xs: (
+    desktop: 1.4rem,
+    tablet: 1.3rem,
+    mobile: 1.2rem,
+  ),
+  sm: (
+    desktop: 1.5rem,
+    tablet: 1.5rem,
+    mobile: 1.4rem,
+  ),
+  base: (
+    desktop: 1.6rem,
+    tablet: 1.5rem,
+    mobile: 1.5rem,
+  ),
+  md: (
+    desktop: 1.8rem,
+    tablet: 1.6rem,
+    mobile: 1.5rem,
+  ),
+  lg: (
+    desktop: 2rem,
+    tablet: 1.8rem,
+    mobile: 1.6rem,
+  ),
+  xl: (
+    desktop: 2.4rem,
+    tablet: 2.2rem,
+    mobile: 1.8rem,
+  ),
+  xxl: (
+    desktop: 3rem,
+    tablet: 2.6rem,
+    mobile: 2rem,
+  ),
+  xxxl: (
+    desktop: 4rem,
+    tablet: 3.5rem,
+    mobile: 2.5rem,
+  ),
+);
+
+$breakpoints: (
+  tablet: 992px,
+  mobile: 768px,
+  sm-mobile: 480px,
+);
+
+@mixin font($size, $line-height: 1, $weight: 300, $letter-spacing: 0.01rem) {
+  $font: map-get($font-sizes, $size);
+
+  font-size: map-get($font, desktop);
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+
+  @each $breakpoint, $width in $breakpoints {
+    @if map-has-key($font, $breakpoint) {
+      @media (max-width: $width) {
+        font-size: map-get($font, $breakpoint);
+      }
+    }
+  }
+}
+
+// Reusable for Big Title
+@mixin fluid-font($min, $vw, $max) {
+  font-size: clamp(#{$min}rem, #{$vw}vw, #{$max}rem);
+}

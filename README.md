@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern portfolio website built with React.
+
+## Environment Setup
+
+This project uses EmailJS for the contact form functionality. To set up the environment:
+
+1. Clone the repository
+2. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+3. Update the `.env` file with your EmailJS credentials:
+   - `REACT_APP_EMAILJS_SERVICE_ID`: Your EmailJS service ID
+   - `REACT_APP_EMAILJS_TEMPLATE_ID`: Your EmailJS template ID
+   - `REACT_APP_EMAILJS_PUBLIC_KEY`: Your EmailJS public key
 
 ## Available Scripts
 

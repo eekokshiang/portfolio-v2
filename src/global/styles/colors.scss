@@ -1,0 +1,60 @@
+// Defaut (Dark Mode)
+:root {
+  // Element Color
+  --color-primary: #e0e0e0;
+  --color-secondary: #3e5158;
+  --color-tertiary: #353a3e;
+  --color-quaternary: #111111;
+
+  // Background Color
+  --color-bg: #000000;
+  --color-bg-90: hsla(0, 0%, 0%, 0.9);
+  --color-bg-50: hsla(0, 0%, 0%, 0.5);
+
+  // Text Color
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #9a9c9d;
+  --color-text-tertiary: #3f4549;
+
+  // Button Color
+  --color-button-el: #e0e0e0;
+  --color-button-hover-el: #e0e0e0;
+  --color-button-active-el: #e0e0e0;
+  --color-button-inactive-el: #586c72;
+  --color-button-border: #3f4549;
+
+  // Email Button BG
+  --email-button-inactive: #2c2c2c;
+  --email-button-active: #8e3333;
+  --email-button-active-hover: #c44545;
+  --email-button-apicalling: #501c1c;
+  // --Element-
+  --email-button-inactive-el: #686868;
+  --email-button-active-el: #ffffff;
+  --email-button-apicalling-el: #603e3e;
+}
+
+// // Light Mode
+// [data-theme='light'] {
+//   // Element Color
+//   --color-primary: #e0e0e0;
+//   --color-secondary: #3e5158;
+//   --color-tertiary: #353a3e;
+
+//   // Background Color
+//   --color-bg: #000000;
+//   --color-bg-90: hsla(0, 0%, 0%, 0.9);
+//   --color-bg-50: hsla(0, 0%, 0%, 0.5);
+
+//   // Text Color
+//   --color-text-primary: #e0e0e0;
+//   --color-text-secondary: #9a9c9d;
+//   --color-text-tertiary: #353a3e;
+
+//   // Button Color
+//   --color-button-el: #e0e0e0;
+//   --color-button-hover-el: #e0e0e0;
+//   --color-button-active-el: #e0e0e0;
+//   --color-button-inactive-el: #3e5158;
+//   --color-button-border: #353a3e;
+// }
