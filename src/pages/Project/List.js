@@ -7,6 +7,8 @@ import projectOneImg from '../../assets/pngs/project1-img.png';
 import projectOneTwo from '../../assets/pngs/project2-img.png';
 import projectOneThree from '../../assets/pngs/project3-img.png';
 
+import projectOneFour from '../../assets/pngs/project4-img.png';
+
 const rawList = [
   {
     title: 'My Digital Playground',
@@ -23,6 +25,19 @@ const rawList = [
       },
     ],
     previewImg: projectOneImg,
+  },
+  {
+    title: 'UX Case Study from a Startup',
+    desc: 'A detailed UX case study on how a crypto startup project for mobile, highlighting the design process, challenges faced along the way.',
+    workOn: ['Figma'],
+    navigate: [
+      {
+        icon: <WebsiteIcon />,
+        text: 'VIEW',
+        link: '/files/ux-case-study.pdf',
+      },
+    ],
+    previewImg: projectOneFour,
   },
   {
     title: 'TorumPay - Crypto Payment App',

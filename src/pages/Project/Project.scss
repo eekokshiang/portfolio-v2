@@ -72,7 +72,6 @@
 }
 
 .project-link-wrapper {
-  @include font(base, 1, 500);
   @include flex-row(flex-start, center, 12px);
 }
 
