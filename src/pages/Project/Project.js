@@ -16,6 +16,17 @@ function Project() {
   const contentRef = useRef();
   const { width } = useWindowSize();
 
+  const current = List[selectedIndex];
+
+  // ✅ Preload all project images on mount
+  useEffect(() => {
+    List.forEach((item) => {
+      const img = new Image();
+      img.src = item.previewImg;
+    });
+  }, []);
+
+  // ✅ Animate on selectedIndex change
   useEffect(() => {
     if (contentRef.current) {
       gsap.fromTo(
@@ -24,7 +35,7 @@ function Project() {
         { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }
       );
     }
-  }, [selectedIndex]); //Triggers on index change
+  }, [selectedIndex]);
 
   const handleNext = () => {
     if (selectedIndex < List.length - 1) {
@@ -38,16 +49,15 @@ function Project() {
     }
   };
 
-  const disableNext = selectedIndex === 0 ? 'disable' : '';
-  const disableBack = selectedIndex === List.length - 1 ? 'disable' : '';
-
-  const current = List[selectedIndex];
+  const disableBack = selectedIndex === 0 ? 'disable' : '';
+  const disableNext = selectedIndex === List.length - 1 ? 'disable' : '';
 
   return (
     <div className="project">
       <div ref={contentRef} className="project-content">
         <div className="project-content-left">
-          {width > 768 ? <p className="project-num">{current.num}</p> : ''}
+          {width > 768 && <p className="project-num">{current.num}</p>}
+
           <div className="content-wrapper">
             <h2 className="project-title">{current.title}</h2>
             <p className="project-desc">{current.desc}</p>
@@ -76,13 +86,11 @@ function Project() {
         </div>
 
         <div className="project-content-right">
-          {width < 768 ? (
+          {width < 768 && (
             <div className="project-mobile-header">
               <p>PROJECT</p>
               <p className="project-num">{current.num}</p>
             </div>
-          ) : (
-            ''
           )}
           <img src={current.previewImg} alt={current.title} />
         </div>
@@ -90,7 +98,7 @@ function Project() {
 
       <div className="project-selector">
         <Button
-          className={`project-switch-button ${disableNext}`}
+          className={`project-switch-button ${disableBack}`}
           onClick={handleBack}
           disabled={selectedIndex === 0}
         >
@@ -99,7 +107,7 @@ function Project() {
         </Button>
 
         <Button
-          className={`project-switch-button ${disableBack}`}
+          className={`project-switch-button ${disableNext}`}
           onClick={handleNext}
           disabled={selectedIndex === List.length - 1}
         >
