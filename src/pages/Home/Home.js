@@ -10,6 +10,7 @@ import { skillIcons } from '../Resume/Sections/Section2/Skills';
 import { ReactComponent as EeLogo } from '../../assets/svgs/ee-logo.svg';
 import { ReactComponent as GithubIcon } from '../../assets/svgs/github-icon.svg';
 import { ReactComponent as LinkedInIcon } from '../../assets/svgs/linkedin-icon.svg';
+import { ReactComponent as BehanceIcon } from '../../assets/svgs/behance-icon.svg';
 import homeCharacter from '../../assets/pngs/home-character.png';
 
 import './Home.scss';
@@ -29,6 +30,18 @@ function Home() {
         <div className="header">
           <EeLogo className="header-logo" />
           <div className="interact-section">
+            <Button
+              className="button--icon"
+              onClick={() =>
+                window.open(
+                  'https://www.behance.net/shiang_ee3164',
+                  '_blank',
+                  'noopener,noreferrer'
+                )
+              }
+            >
+              <BehanceIcon />
+            </Button>
             <Button
               className="button--icon"
               onClick={() =>
